@@ -32,7 +32,7 @@ This document provides step-by-step instructions for setting up, deploying, and 
 
 ### Build images for each.
 ```bash
-docker build -t  . bdev
+docker build -t . bdev
 docker build -t . bprod
 docker build -t . frontend
 ```
