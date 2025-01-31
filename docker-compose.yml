@@ -1,0 +1,23 @@
+version: '1'
+services:
+  bdev:
+    image: bdev
+    build:
+      context: ./backendDev
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+  bprod:
+    image: bprod
+    build:
+      context: ./backendProd
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+  frontend:
+    image: frontend
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
