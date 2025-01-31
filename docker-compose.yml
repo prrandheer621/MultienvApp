@@ -1,6 +1,7 @@
-version: '1'
+version: '3'
 services:
   bdev:
+    container_name: bdev
     image: bdev
     build:
       context: ./backendDev
@@ -8,6 +9,7 @@ services:
     ports:
       - "3001:3001"
   bprod:
+    container_name: bprod
     image: bprod
     build:
       context: ./backendProd
@@ -15,6 +17,7 @@ services:
     ports:
       - "3002:3002"
   frontend:
+    container_name: frontend
     image: frontend
     build: 
       context: ./frontend
